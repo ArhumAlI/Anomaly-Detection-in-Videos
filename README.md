@@ -1,1 +1,4 @@
-# Anomaly-Detection-in-Videos
+Finding irregularities in images and videos is a burdensome task as most input data includes extremely complex patterns such as an image of a crowded street. Anomalies are described as things or events which are very infrequently occurring in the input stream. We propose an unsupervised methodology based on Generative Adversarial Networks (GANs) composed of a CONV-LSTM spatio-temporal autoencoder, capable of generating n continuous frames, to detect the irregularities from videos. The produced frames are stacked up against the original frames in the discriminator network which tries to distinguish the real frames from the fake. The network is trained on the positive or the regular samples of data which generates samples on the positive data distribution with minimum error while maximizing error the data or events which had not been seen before or are novel. The reconstruction error determines whether the data is regular or irregular. The network was tested on UCSD PED 1 dataset and was able to efficiently identify the true irregularities while achieving a very low false-positive rate. 
+
+
+
