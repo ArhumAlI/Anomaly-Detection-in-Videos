@@ -1,0 +1,55 @@
+Filename Testing CONV-LSTM
+
+Functions:
+1- get_test_data()    		--->	Fetches test video data, resizes it to 256x256 and 
+			        	converts each frame to grayscale while normalizing.
+
+2- predict_test_data()  	--->	The model is put to task to generate frames from 
+					the test data. Here it would try to generate the 
+					regular events vividly while irregular events blurry.
+
+3- spot_irregularity()		--->	This function compares an original frame with 
+					the generated frame and marks red dots to represent 
+					differences.
+
+4- generate_video()     	--->	Generates a motion video from the marked frames.
+
+5- generate_regularity_graph	--->	Regularity score plotted against the frames
+
+6- quantify_performance()	--->	Calculate EER, FalsePositive Rate, TruePositive Rate,
+					and plot ROC Curve
+
+
+Filename UCSD_Gans_CONVLSTM_Training
+
+1- get_training_data()		--->	Fetch the training data and merge 10 Frames for input
+
+
+2- get_noisy_data()		--->	The function below adds random noise to each frame of 
+					each video. This adds some flexibility in the training data.
+
+3- class Training_Model()	--->	All defined Architechture
+
+Within the Class:
+3.1- create_networks()		--->	Combined architechture which creates the Generator and the 
+					Discriminator models. Defines their loss/optimization functions.
+
+3.2- create_discriminator()	--->	The whole architecture of the discriminator model with each layer
+					defined and commented properly. 
+
+3.3- create_generator()		--->	The whole architecture of the generator model with each layer
+					defined and commented properly.
+
+3.3.1 add_encoder()		--->	Creates the encoder part. It has two convolution layers extracting
+					the spatial features and decomposing the input frame into 
+					multiple sub frames each giving certain feature like corners, edges.
+
+3.3.2 deconv()			--->	Creates the encoder part. It has two transpose convolution layers 
+					to revert the subframes to the original frames. Giving out 10 frames.
+ 
+3.4- train()			--->	Defines the training of the adversarial network. Losses are 
+					updated while each training loop runs. It also plots a graph
+					of Generators error against epochs.
+
+
+	 

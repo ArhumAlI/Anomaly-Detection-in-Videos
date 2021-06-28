@@ -1,0 +1,41 @@
+Prerequisites:
+
+1- Download the data from this link -> http://www.svcl.ucsd.edu/projects/anomaly/dataset.html
+
+2- Once downloaded, unpack the files.
+
+3- Open the "UCSDped1" folder and zip the Test folder only as "Testing.zip". 
+
+3- Login to your Google drive and create a new folder "UCSD".
+
+4- Double click the new folder and upload the zipped folder.  
+
+
+
+How to Run on Google Colab:
+
+1 - Go to this link	-->		shorturl.at/dADI7
+
+2- Login using your google account to use colab services.
+
+3- Click "File" then "upload" select "Testing_CONV_LSTM.ipynb" and upload.
+
+4- Once the file is uploaded, click "Runtime" -> "Change runtime type".
+
+5- Select "GPU" from "Hardware accelarator" dropdown and save.
+
+6- On the left side of colab, click the folder icon and then upload the "model_GANS.h5".
+
+7- Click the first cell and press shift + enter together to run the cell.
+
+8- Do that for all other cells.
+
+9- on this cell "from google.colab import drive  drive.mount('/gdrive')" 
+
+   press shift + enter and then follow the generated link.
+
+10- Select your google account and allow all. 
+
+11- Copy the generated code and paste it in the space below the cell where it prompts.
+
+1- Run all cells as previously described.   
